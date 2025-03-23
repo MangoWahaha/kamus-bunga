@@ -1,0 +1,89 @@
+:root {
+  --primary-color: #f48fb1;
+  --secondary-color: #ff9800;
+  --accent-color: #9c27b0;
+  --navbar-bg: #ffecb3;
+  --navbar-text: #4a4a4a;
+  --bg-color: #fff8e1;
+  --text-color: #4a4a4a;
+  --success-color: #4caf50;
+  --warning-color: #f44336;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(255, 236, 179, 0.8);
+  border-bottom: 1px solid var(--primary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* Navigation Logo */
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--accent-color);
+}
+
+/* Navigation */
+.navbar .navbar-nav a {
+  color: var(--navbar-text);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary-color);
+  padding: 0px 10px; /* Tambahkan padding agar lebih rapi */
+  transition: 0.6s;
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.1rem solid var(--primary-color);
+  transform: scaleX(0);
+  transition: 0.6s;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.8);
+}
+
+.navbar .navbar-extra a {
+  color: var(--navbar-text);
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary-color);
+  transition: 0.6s;
+}
